@@ -10,7 +10,7 @@
     <tbody>
    
     
-      <tr *ngFor = "let student of studentArray ; index as i">
+      <tr *ngFor = "let student of studentService.studentArray ; index as i">
         <td>{{i+1}}</td>
         <td>{{student.firstName}}</td>
         <td>{{student.lastName}}</td>

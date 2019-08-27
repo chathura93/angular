@@ -8,15 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponent implements OnInit {
 
 
-
   student = {
-    firstName : "THARINDU",
+    firstName : "THARINDUWa",
     lastName : "Rukshan",
     city: "kurunegala"
   }
   constructor() { }
 
+
   ngOnInit() {
   }
+
+
+  clickSubmit(){
+    alert("click submit button ")
+  }
+
 
 }

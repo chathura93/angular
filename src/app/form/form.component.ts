@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StudentService} from '../student.service'
 
 @Component({
   selector: 'app-form',
@@ -9,11 +10,11 @@ export class FormComponent implements OnInit {
 
 
   student = {
-    firstName : "THARINDUWa",
-    lastName : "Rukshan",
-    city: "kurunegala"
+    firstName : "",
+    lastName : "",
+    city: ""
   }
-  constructor() { }
+  constructor(private studentService : StudentService) { }
 
 
   ngOnInit() {
@@ -21,7 +22,9 @@ export class FormComponent implements OnInit {
 
 
   clickSubmit(){
-    alert("click submit button ")
+
+    this.studentService.addStudent(this.student);
+  
   }
 
 

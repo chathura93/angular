@@ -5,6 +5,7 @@
         <th scope="col">First</th>
         <th scope="col">Last</th>
         <th scope="col">City</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +16,10 @@
         <td>{{student.firstName}}</td>
         <td>{{student.lastName}}</td>
         <td>{{student.city}}</td>
+        <td><button type="button" class="btn btn-primary" (click) = "clickSubmit()">Edit</button></td>
+        <!-- <td><button type="button" class="btn btn-primary" (click) = "clickSubmit()">Delete</button></td> -->
+         <i class='fas fa-archive' (click) = "deleteStudent(student)"></i>
+        
       </tr>
     </tbody>
   </table>

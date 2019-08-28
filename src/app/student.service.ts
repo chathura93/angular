@@ -7,7 +7,9 @@ import {TableComponent} from './table/table.component';
 })
 export class StudentService {
 
-  constructor() { }
+  constructor() { 
+    console.log("service")
+  }
   student = {
     firstName : "THARINDU",
     lastName : "Rukshan",
@@ -22,10 +24,16 @@ export class StudentService {
 
  studentArray :any=[this.student,this.student1]
 
- studentNew = {
-  firstName : "THARINDUWa",
-  lastName : "Rukshan",
-  city: "kurunegala"
+
+addStudent(student){
+  console.log(student.firstName);
+  this.studentArray.push(student)
+
 }
+removeStudent(){
+  console.log("remove student"),
+  this.studentArray.pop(this.student)
+}
+
 
 }

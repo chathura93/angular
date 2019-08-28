@@ -26,9 +26,16 @@ export class TableComponent implements OnInit {
 
   // studentArray :any=[this.student,this.student1]
 
-  constructor(private studentService : StudentService) { }
+  constructor(private studentService : StudentService) { 
+    console.log("table comp")
+
+  }
 
   ngOnInit() {
+  }
+  deleteStudent(student){
+    console.log()
+    this.studentService.removeStudent();
   }
 
 }
